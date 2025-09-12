@@ -1,0 +1,9 @@
+// View Width PC
+@function vw_pc($px, $base: 1920) {
+  @return ($px / $base) * 100vw;
+}
+
+// View Width SP
+@function vw_sp($px, $base: 375) {
+  @return ($px / $base) * 100vw;
+}

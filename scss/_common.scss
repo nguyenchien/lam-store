@@ -1,0 +1,42 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: vw_pc(16);
+  font-weight: 400;
+  color:#666666;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  overflow-x: hidden;
+
+  @include sp {
+    font-size: vw_sp(13);
+  }
+}
+img {
+  max-width:100%;
+  height: auto;
+  vertical-align:middle;
+}
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+.sp {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+.c-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.l-container {
+  width: vw_pc(1200);
+  margin: 0 auto;
+}

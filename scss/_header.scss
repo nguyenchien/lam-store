@@ -9,6 +9,7 @@ header {
   height: vw_pc(94);
   padding: 0 vw_pc(40);
   background: transparent;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   z-index: 1000;
   transition: all 0.3s;
   .link {

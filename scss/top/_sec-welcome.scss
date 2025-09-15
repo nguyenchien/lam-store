@@ -1,9 +1,6 @@
 .sec-welcome {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  .logo {
-    width: vw_pc(280);
-  }
+  padding-top: vw_pc(94);
 }

@@ -86,6 +86,8 @@ header {
   height: 4.8958333333vw;
   padding: 0 2.0833333333vw;
   background: transparent;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   z-index: 1000;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -205,7 +207,6 @@ header .menu a:hover::after, header .menu a.is-active::after {
   }
 }
 .sec-welcome {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,15 +216,17 @@ header .menu a:hover::after, header .menu a.is-active::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.sec-welcome .logo {
-  width: 14.5833333333vw;
+  padding-top: 4.8958333333vw;
 }
 
 footer {
-  background: #111;
-  padding: 50px;
+  background: #222;
+  padding: 2.0833333333vw;
+  color: #fff;
   text-align: center;
-  color: #aaa;
+}
+footer p {
+  font-size: 0.78125vw;
+  line-height: 1.7;
 }
 /*# sourceMappingURL=style.css.map */

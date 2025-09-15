@@ -1,6 +1,10 @@
 footer {
-  background: #111;
-  padding: 50px;
+  background: #222;
+  padding: vw_pc(40);
+  color: #fff;
   text-align: center;
-  color: #aaa;
+  p {
+    font-size: vw_pc(15);
+    line-height: 1.7;
+  }
 }

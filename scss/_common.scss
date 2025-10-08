@@ -3,15 +3,19 @@ html {
 }
 body {
   font-family: "Inter", sans-serif;
-  font-size: vw_pc(16);
+  font-size: 16px;
   font-weight: 400;
-  color:#666666;
-  line-height: 1.5;
-  letter-spacing: 0.1em;
+  color:#000000;
+  line-height: 1.6;
   overflow-x: hidden;
 
+  @include pc_middle {
+    font-size: vw_pc(16);
+  }
+
   @include sp {
-    font-size: vw_sp(13);
+    font-size: vw_sp(14);
+    line-height: 1.4;
   }
 }
 img {
@@ -37,6 +41,6 @@ img {
   object-fit: cover;
 }
 .l-container {
-  width: vw_pc(1200);
+  width: 1280px;
   margin: 0 auto;
 }

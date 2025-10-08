@@ -1,0 +1,6 @@
+.sec-mv {
+  padding-top: 95px;
+  @include pc_middle {
+    padding-top: vw_pc(95);
+  }
+}

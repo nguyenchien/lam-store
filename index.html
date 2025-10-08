@@ -199,7 +199,7 @@
   }
   </script>
   <!-- Optional: favicon -->
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" href="/favicon.ico?v=123" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -211,33 +211,95 @@
     <div class="loader"></div>
   </div>
 
-  <header>
-    <div class="logo">
+  <header class="header">
+    <h1 class="logo">
       <a href="/" class="link">
-        <img src="images/logo.png" width="1024" height="1024" alt="">
-        <span class="name">Lam Store</span>
+        <img src="images/logo.png" width="70" height="70" alt="Cơm Gà LamStore">
+        <span class="name">Cơm Gà LamStore</span>
       </a>
-    </div>
+    </h1>
     <div class="menu">
-      <a href="#com">Cơm</a>
-      <a href="#mi">Mì</a>
-      <a href="#banhbao">Bánh Bao</a>
-      <a href="#trasua">Trà Trái Cây</a>
-      <a href="#trasua">Trà Sữa</a>
+      <ul class="menu-list">
+        <li class="item">
+          <a class="link" href="#com">Cơm</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#mi">Mì</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#hutieu">Hủ tiếu</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#banhbao">Bánh bao</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#monchay">Món chay</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#trasua_tratraicay">Trà sữa - Trà trái cây</a>
+        </li>
+      </ul>
     </div>
   </header>
 
   <main>
-    <section class="sec-welcome">
-      <h1 class="banner">
-        <img src="images/banner01.webp" width="1600" height="900" alt="">
-      </h1>
+    <section class="sec-mv">
+      <picture>
+        <source media="(max-width:767px)" srcset="images/mv_sp.jpg" width="750" height="392">
+        <img class="c-cover" src="images/mv.jpg" width="2880" height="1508" alt="">
+      </picture>
     </section>
   </main>
 
-  <footer>
-    <p class="logo">Lam Store - 0963 581 292</p>
-    <p class="address">Gần uỷ ban xã Bình Thắng</p>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <div class="logo">
+          <a href="/" class="link">
+            <img src="images/logo.png" width="70" height="70" alt="Cơm Gà LamStore">
+            <span class="name">Cơm Gà LamStore</span>
+          </a>
+        </div>
+        <p class="address">Ấp 2, Xã Bình Thắng<br>(gần Uỷ ban Bình Thắng)</p>
+      </div>
+      <ul class="c-sns-list">
+        <li class="item item-fb">
+          <a target="_blank" href="https://www.facebook.com/trinh.ngo.51298" class="link"></a>
+        </li>
+        <li class="item item-chat">
+          <a target="_blank" href="https://m.me/trinh.ngo.51298" class="link"></a>
+        </li>
+        <li class="item item-zalo">
+          <a target="_blank" href="https://zalo.me/0963581292" class="link"></a>
+        </li>
+        <li class="item item-phone">
+          <a target="_blank" href="tel:0963581292" class="link"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <ul class="menu-list">
+        <li class="item">
+          <a class="link" href="#com">Cơm</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#mi">Mì</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#hutieu">Hủ tiếu</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#banhbao">Bánh bao</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#monchay">Món chay</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#trasua_tratraicay">Trà sữa - Trà trái cây</a>
+        </li>
+      </ul>
+      <p class="copy-right">©Copyright 2025 LamStore</p>
+    </div>
   </footer>
 
   <!-- JS -->

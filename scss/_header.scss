@@ -1,4 +1,4 @@
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,51 +6,60 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: vw_pc(94);
-  padding: 0 vw_pc(40);
-  background: transparent;
+  height: 95px;
+  padding: 0 40px;
+  background: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  z-index: 1000;
   transition: all 0.3s;
-  .link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: vw_pc(10);
-    img {
-      width: vw_pc(32);
-    }
-    .name {
-      font-size: vw_pc(16);
-      font-weight: 700;
-      color: #222;
+  @include pc_middle {
+    height: vw_pc(95);
+    padding: 0 vw_pc(40);
+  }
+  .logo {
+    .link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 5px;
+      img {
+        width: 35px;
+      }
+      .name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+      }
+      @include pc_middle {
+        gap: vw_pc(5);
+        img {
+          width: vw_pc(35);
+        }
+        .name {
+          font-size: vw_pc(16);
+        }
+      }
     }
   }
   .menu {
-    display: flex;
-    gap: vw_pc(30);
-    a {
-      font-size: vw_pc(20);
-      font-weight: 500;
-      color:#222;
-      line-height: 1;
+    &-list {
+      display: flex;
+      gap: 40px;
+    }
+    .link {
+      font-size: 14px;
+      font-weight: 700;
+      color:#000;
       text-decoration: none;
-      position: relative;
-      &::after {
-        content: '';
-        width: 0;
-        height: vw_pc(4);
-        background-color: currentColor;
-        position: absolute;
-        bottom: vw_pc(-17);
-        left: 0;
-        transition: all .3s;
-      }
+      transition: all 0.3s;
       &:hover,
-      &.is-active {
-        &::after {
-          width: 100%;
-        }
+      &.active {
+        color: #B72623;
+      }
+    }
+    @include pc_middle {
+      gap: vw_pc(40);
+      .link {
+        font-size: vw_pc(14);
       }
     }
   }

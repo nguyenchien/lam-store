@@ -7,6 +7,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include pc_middle {
+      padding: vw_pc(50) vw_pc(80);
+    }
+    @include sp {
+      padding: vw_sp(40) vw_sp(15) 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &-bottom {
     display: flex;
@@ -14,6 +22,15 @@
     align-items: center;
     border-top: 1px solid #fff;
     padding: 30px 80px;
+    @include pc_middle {
+      padding: vw_pc(30) vw_pc(80);
+    }
+    @include sp {
+      flex-direction: column;
+      padding: vw_sp(30) vw_sp(15) vw_sp(15);
+      align-items: flex-start;
+      border-top: none;
+    }
   }
   .logo {
     .link {
@@ -38,6 +55,15 @@
           font-size: vw_pc(16);
         }
       }
+      @include sp {
+        gap: vw_sp(5);
+        img {
+          width: vw_sp(35);
+        }
+        .name {
+          font-size: vw_sp(16);
+        }
+      }
     }
   }
   .contact {
@@ -46,6 +72,14 @@
     line-height: 1.5;
     color: #fff;
     margin-top: 12px;
+    @include pc_middle {
+      font-size: vw_pc(16);
+      margin-top: vw_pc(12);
+    }
+    @include sp {
+      font-size: vw_sp(14);
+      margin-top: vw_sp(10);
+    }
   }
   .menu-list {
     display: flex;
@@ -61,10 +95,45 @@
         color: #F8A721;
       }
     }
+    @include pc_middle {
+      gap: vw_pc(40);
+      .link {
+        font-size: vw_pc(14);
+      }
+    }
+    @include sp {
+      gap: vw_sp(15);
+      flex-direction: column;
+      align-items: flex-start;
+      .link {
+        font-size: vw_sp(13);
+      }
+    }
   }
   .copy-right {
     font-size: 14px;
     color: #fff;
+    @include pc_middle {
+      font-size: vw_pc(14);
+    }
+    @include sp {
+      width: 100%;
+      font-size: vw_sp(12);
+      text-align: center;
+      position: relative;
+      padding-top: vw_sp(15);
+      margin-top: vw_sp(30);
+      &::before {
+        content: '';
+        width: calc(100% + vw_sp(30));
+        height: 1px;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
 .btn-to-top {
@@ -77,10 +146,25 @@
   right: 80px;
   cursor: pointer;
   transition: all 0.3s;
+  @include pc_middle {
+    width: vw_pc(60);
+    height: vw_pc(60);
+    top: vw_pc(-61);
+    right: vw_pc(80);
+  }
+  @include sp {
+    width: vw_sp(40);
+    height: vw_sp(40);
+    top: vw_sp(-41);
+    right: vw_sp(15);
+  }
   &:hover {
     background-color: rgb(183, 38, 35, 1);
     &::before {
       background-image: url("data:image/svg+xml,%3Csvg width='16' height='21' viewBox='0 0 16 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976314 7.29289 0.292892L0.928932 6.65685C0.538407 7.04738 0.538407 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM8 21L9 21L9 1L8 1L7 1L7 21L8 21Z' fill='white'/%3E%3C/svg%3E%0A");
+      @include sp {
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976314 7.29289 0.292892L0.928932 6.65685C0.538407 7.04738 0.538407 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM8 21L9 21L9 1L8 1L7 1L7 21L8 21Z' fill='white'/%3E%3C/svg%3E%0A");
+      }
     }
   }
   &::before {
@@ -97,5 +181,14 @@
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 0.3s;
+    @include pc_middle {
+      width: vw_pc(16);
+      height: vw_pc(21);
+    }
+    @include sp {
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.07112 0.292892C7.6806 -0.0976315 7.04743 -0.0976314 6.65691 0.292892L0.292945 6.65685C-0.0975789 7.04738 -0.0975789 7.68054 0.292946 8.07107C0.68347 8.46159 1.31663 8.46159 1.70716 8.07107L7.36401 2.41421L13.0209 8.07107C13.4114 8.46159 14.0446 8.46159 14.4351 8.07107C14.8256 7.68054 14.8256 7.04738 14.4351 6.65685L8.07112 0.292892ZM7.36401 16L8.36401 16L8.36401 0.999999L7.36401 0.999999L6.36401 0.999999L6.36401 16L7.36401 16Z' fill='%23B72623'/%3E%3C/svg%3E%0A");
+      width: vw_sp(15);
+      height: vw_sp(16);
+    }
   }
 }

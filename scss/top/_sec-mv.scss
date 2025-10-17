@@ -3,4 +3,7 @@
   @include pc_middle {
     padding-top: vw_pc(95);
   }
+  @include sp {
+    padding-top: vw_sp(65);
+  }
 }

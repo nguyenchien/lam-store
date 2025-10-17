@@ -3,12 +3,30 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  @include pc_middle {
+    gap: vw_pc(20);
+  }
+  @include sp {
+    gap: vw_sp(20);
+    margin-top: vw_sp(30);
+    &.is-humburger-menu {
+      margin-top: vw_sp(20);
+    }
+  }
   .item {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #fff;
     transition: all 0.3s;
+    @include pc_middle {
+      width: vw_pc(40);
+      height: vw_pc(40);
+    }
+    @include sp {
+      width: vw_sp(40);
+      height: vw_sp(40);
+    }
     &:hover {
       background-color: #F8A721;
       .icon {
@@ -23,21 +41,45 @@
     &-fb {
       .icon {
         width: 10px;
+        @include pc_middle {
+          width: vw_pc(10);
+        }
+        @include sp {
+          width: vw_sp(10);
+        }
       }
     }
     &-chat {
       .icon {
         width: 20px;
+        @include pc_middle {
+          width: vw_pc(20);
+        }
+        @include sp {
+          width: vw_sp(20);
+        }
       }
     }
     &-zalo {
       .icon {
         width: 25px;
+        @include pc_middle {
+          width: vw_pc(25);
+        }
+        @include sp {
+          width: vw_sp(25);
+        }
       }
     }
     &-phone {
       .icon {
         width: 15px;
+        @include pc_middle {
+          width: vw_pc(15);
+        }
+        @include sp {
+          width: vw_sp(15);
+        }
       }
     }
   }
@@ -64,12 +106,33 @@
   position: fixed;
   right: 10px;
   bottom: 10px;
+  @include pc_middle {
+    right: vw_pc(10);
+    bottom: vw_pc(10);
+  }
+  @include sp {
+    right: vw_sp(15);
+    bottom: vw_sp(15);
+  }
   &-list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    gap: 20px;
+    @include pc_middle {
+      gap: vw_pc(20);
+    }
+    @include sp {
+      gap: vw_sp(20);
+    }
     .item {
-      width: 60px;
+      width: 55px;
+      @include pc_middle {
+        width: vw_pc(55);
+      }
+      @include sp {
+        width: vw_sp(45);
+      }
       img {
         animation-name: tada;
         animation-delay: 0s;
@@ -94,10 +157,19 @@
         }
       }
       &.is-call {
+        width: 60px;
         height: 60px;
         border-radius: 50%;
         background-color: #fff;
         border: 1px solid #B72623;
+        @include pc_middle {
+          width: vw_pc(60);
+          height: vw_pc(60);
+        }
+        @include sp {
+          width: vw_sp(54);
+          height: vw_sp(54);
+        }
         .link {
           position: relative;
           display: block;
@@ -113,6 +185,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+            @include pc_middle {
+              width: vw_pc(50);
+              height: vw_pc(50);
+            }
+            @include sp {
+              width: vw_sp(50);
+              height: vw_sp(50);
+            }
           }
         }
         .img-wrap {
@@ -121,11 +201,12 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%,-50%);
-        }
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          @include pc_middle {
+            width: vw_pc(23);
+          }
+          @include sp {
+            width: vw_sp(23);
+          }
         }
       }
     }

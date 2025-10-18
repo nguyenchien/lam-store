@@ -80,7 +80,7 @@
     }
     @include sp {
       width: 100%;
-      max-height: 75vh;
+      height: 100vh;
       overflow-y: scroll;
       position: absolute;
       top: vw_sp(65);
@@ -89,6 +89,7 @@
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s;
+      padding-bottom: vw_sp(100);
       &.is-open {
         opacity: 1;
         visibility: visible;

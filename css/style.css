@@ -475,7 +475,7 @@ img {
 @media screen and (max-width: 767px) {
   .header .menu {
     width: 100%;
-    max-height: 75vh;
+    height: 100vh;
     overflow-y: scroll;
     position: absolute;
     top: 17.3333333333vw;
@@ -485,6 +485,7 @@ img {
     visibility: hidden;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    padding-bottom: 26.6666666667vw;
   }
   .header .menu.is-open {
     opacity: 1;
